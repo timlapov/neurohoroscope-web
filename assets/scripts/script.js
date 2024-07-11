@@ -19,7 +19,7 @@ const P_RESPONSE = document.getElementById("response");
 const SUBMIT_BUTTON = document.getElementById("submit-button");
 
 //FOR API
-const OPENAI_API_KEY = "";
+const OPENAI_API_KEY = "PLACEHOLDER_API_KEY";
 
 let usersZodiac = "";
 let period = "";
