@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+    <h1>Le Voyant Numérique</h1>
+    <div class="container">
+        <div class="panel left-panel">
+            <form id="form">
+                <!-- zodiac-selector -->
+                <div class="selector-container">
+                    <label for="birth-month">Choisissez votre mois de naissance</label>
+                    <select name="birth-month" id="birth-month" required>
+                        <option value="">--Mois--</option>
+                        <option value="1">Janvier</option>
+                        <option value="2">Février</option>
+                        <option value="3">Mars</option>
+                        <option value="4">Avril</option>
+                        <option value="5">Mai</option>
+                        <option value="6">Juin</option>
+                        <option value="7">Juillet</option>
+                        <option value="8">Août</option>
+                        <option value="9">Septembre</option>
+                        <option value="10">Octobre</option>
+                        <option value="11">Novembre</option>
+                        <option value="12">Décembre</option>
+                    </select>
+                </div>
+
+                <div class="selector-container">
+                    <label for="birth-day">Choisissez votre jour de naissance</label>
+                    <select name="birth-day" id="birth-day" required>
+                        <option value="">--Jour--</option>
+                        <!-- JavaScript will make the days -->
+                    </select>
+                </div>
+
+                <!-- Perdiod selector -->
+                <div class="selector-container">
+                    <label for="period">Pour quelle période souhaitez-vous obtenir une prévision ?</label>
+                    <select name="period" id="period-selector">
+                        <option value="">--Période--</option>
+                        <option value="ce jour">Ce jour</option>
+                        <option value="cette semaine">Cette semaine</option>
+                        <option value="ce mois">Ce mois</option>
+                        <option value="cette annee">Cette année</option>
+                    </select>
+                </div>
+
+                <!-- Aspect selector -->
+                <div class="selector-container">
+                    <label for="aspect">Quel aspect de votre vie vous intéresse le plus ?</label>
+                    <select name="aspect" id="aspect-selector">
+                        <option value="">--Aspect--</option>
+                        <option value="vie">Vie</option>
+                        <option value="amour">Amour</option>
+                        <option value="carriere">Carrière</option>
+                        <option value="sante">Santé</option>
+                        <option value="finances">Finances</option>
+                    </select>
+                </div>
+                <button class="button-46" type="submit" id="submit-button">
+                    <span>Obtenir une réponse</span>
+                </button>
+            </form>
+        </div>
+        <!-- RESPONSE PANEL -->
+        <div class="panel right-panel">
+            <div class="response-top">
+                <p id="request"></p>
+            </div>
+            <div class="response-bottom">
+                <p class="response-loading" id="response"></p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
