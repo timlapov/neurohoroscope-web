@@ -34,7 +34,7 @@ Pour tester et utiliser cette application, vous devez disposer d'une **clé API 
 
 ## Installation et utilisation
 
-![GitHub Pages](https://timlapov.github.io/neurohoroscope-web/)
+[GitHub Pages](https://timlapov.github.io/neurohoroscope-web/)
 
 1. Clonez ce dépôt sur votre machine locale
 2. Ouvrez le fichier `index.html` dans votre navigateur
