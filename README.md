@@ -34,6 +34,8 @@ Pour tester et utiliser cette application, vous devez disposer d'une **clé API 
 
 ## Installation et utilisation
 
+![GitHub Pages](https://timlapov.github.io/neurohoroscope-web/)
+
 1. Clonez ce dépôt sur votre machine locale
 2. Ouvrez le fichier `index.html` dans votre navigateur
 3. Lors de la première utilisation, entrez votre clé API OpenAI lorsque vous y êtes invité
