@@ -18,15 +18,34 @@ const P_REQUEST = document.getElementById("request");
 const P_RESPONSE = document.getElementById("response");
 const SUBMIT_BUTTON = document.getElementById("submit-button");
 
-//FOR API
-const OPENAI_API_KEY = "PLACEHOLDER_API_KEY";
-
 let usersZodiac = "";
 let period = "";
 let aspect = "";
 let request = "";
 let requestToApi = "";
 let access_token = "";
+
+//FOR API
+let open_api_key = "";
+//API-KEY REQUEST
+async function initializeApiKey() {
+  let apiKey = localStorage.getItem("open_api_key");
+  if (!apiKey) {
+    apiKey = await promptForApiKey();
+    if (!apiKey) {
+      alert(
+        "La clé API n'est pas fournie. Certaines fonctionnalités du site peuvent ne pas être disponibles."
+      );
+    }
+  }
+}
+async function promptForApiKey() {
+  const apiKey = prompt("Veuillez saisir votre clé API OpenAI :");
+  if (apiKey) {
+    localStorage.setItem("open_api_key", apiKey);
+  }
+  return apiKey;
+}
 
 function getZodiacSign(day, month) {
   if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
@@ -136,14 +155,15 @@ function stopLoading() {
 
 //REQUEST – RESPONSE
 async function getPredictionFromOpenAI() {
+  open_api_key = localStorage.getItem("open_api_key");
   const url = "https://api.openai.com/v1/chat/completions";
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${OPENAI_API_KEY}`,
+    Authorization: `Bearer ${open_api_key}`,
   };
   const body = JSON.stringify({
-    model: "gpt-3.5-turbo",
-    // model: "gpt-4o",
+    // model: "gpt-3.5-turbo",
+    model: "gpt-4o",
     messages: [
       {
         role: "system",
@@ -173,6 +193,7 @@ async function getPredictionFromOpenAI() {
 // DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
   SUBMIT_BUTTON.disabled = true;
+  initializeApiKey();
 
   MONTH_SELECTOR.addEventListener("change", () => {
     const month = parseInt(MONTH_SELECTOR.value);

@@ -132,9 +132,9 @@ h1 {
   cursor: pointer;
   display: flex;
   font-family: Inter, sans-serif;
-  font-size: 18px; /* Базовый размер шрифта */
+  font-size: 18px; 
   justify-content: center;
-  line-height: 17px; /* Межстрочный интервал */
+  line-height: 17px; 
   max-width: 100%;
   padding: 14px 22px;
   text-decoration: none;
