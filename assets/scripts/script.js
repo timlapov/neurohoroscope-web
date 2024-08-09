@@ -122,10 +122,8 @@ function updateRequestToApi() {
   La prédiction doit tenir compte des caractéristiques typiques de ce signe du zodiaque. 
   Faire des prévisions pour ${period}. Elle doit être en rapport avec le sujet ${aspect}. 
   Jusqu'à 1 000 caractères. Ne mentionnez pas qu'il s'agit d'une prédiction fictive, ne mentionnez pas ${style}. 
-  Donnez simplement la prédiction (elle doit être prête à être imprimée dans le journal). 
-  Réponse en russe.
+  Donnez simplement la prédiction (elle doit être prête à être imprimée dans le journal).
   `;
-  //console.log(requestToApi);
 }
 
 //BUTTTON status
