@@ -123,6 +123,7 @@ function updateRequestToApi() {
   Faire des prévisions pour ${period}. Elle doit être en rapport avec le sujet ${aspect}. 
   Jusqu'à 1 000 caractères. Ne mentionnez pas qu'il s'agit d'une prédiction fictive, ne mentionnez pas ${style}. 
   Donnez simplement la prédiction (elle doit être prête à être imprimée dans le journal). 
+  Réponse en russe.
   `;
   //console.log(requestToApi);
 }
@@ -163,7 +164,7 @@ async function getPredictionFromOpenAI() {
   };
   const body = JSON.stringify({
     // model: "gpt-3.5-turbo",
-    model: "gpt-4o",
+    model: "gpt-4o-mini",
     messages: [
       {
         role: "system",
